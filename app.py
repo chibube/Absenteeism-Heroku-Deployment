@@ -46,20 +46,7 @@ def home():
 
     return render_template('index.html', form=form, prediction = prediction, probability=probability, id=id)
 
-@app.route('/predict', methods=['POST'])
-def predict():
-    '''
-    for rendering results of our predictions
-    '''
-    pass
 
-#@app.error_handler(404)
-#def page_not_found(e):
-#    return render_template('404.html'), 404
-
-#@app.error_handler(500)
-#def internal_server_error(e):
-#    return render_template('500.html'), 500
 
 if __name__ == '__main__':
     app.run()
