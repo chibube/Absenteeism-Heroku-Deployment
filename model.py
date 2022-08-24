@@ -29,10 +29,13 @@ class absenteeism_model():
     
     def __init__(self, model_file, scaler_file):
         # reading the 'model' and 'scaler' files which were saved
-        with open('model','rb') as model_file, open('scaler','rb') as scaler_file:
-            self.reg = pickle.load(model_file)
-            self.scaler = pickle.load(scaler_file)
-            self.data = None
+        # we need to pass the CustomScaler class into __main__
+        if __name__ = '__main__':
+            CustomScaler()
+            with open('model','rb') as model_file, open('scaler','rb') as scaler_file:
+                self.reg = pickle.load(model_file)
+                self.scaler = pickle.load(scaler_file)
+                self.data = None
             
     #automate the preprocessing of the '.csv' file
     def load_and_clean_data(self, data_file):
