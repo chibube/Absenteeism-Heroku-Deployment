@@ -2,12 +2,12 @@ from flask import Flask, request, render_template
 from flask_bootstrap import Bootstrap
 from forms import EmployeeForm
 import pandas as pd
-from model import absenteeism_model, CustomScaler
+from model import absenteeism_model
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = 'hard string'
-CustomScaler()
+
 
 predictor = absenteeism_model('model', 'scaler')
 #the home page will have both a get and post method to enable us render the template before and after submission
