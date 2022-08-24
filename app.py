@@ -7,7 +7,7 @@ from model import absenteeism_model
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
-#app.config['SECRET_KEY'] = 'hard string'
+app.config['SECRET_KEY'] = 'hard string'
 
 
 predictor = absenteeism_model('model', 'scaler')
