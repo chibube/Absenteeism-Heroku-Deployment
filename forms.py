@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired, InputRequired
 class EmployeeForm(FlaskForm):
     id = IntegerField("Employee ID", validators=[DataRequired()])
     reason_for_absence = IntegerField("Reason for absence", validators=[InputRequired()])
-    date = DateField("Date", validators=[DataRequired()], format ='%Y-%m-%d',  description='dd/mm/yyyy')
+    date = DateField("Date", validators=[DataRequired()], format ='%Y-%m-%d')
     transport = IntegerField("Transport expense", validators=[DataRequired()])
     distance = IntegerField("Distance to work", validators=[DataRequired()])
     age = IntegerField("Age", validators=[DataRequired()])
